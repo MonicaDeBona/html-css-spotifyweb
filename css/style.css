@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-.wrapper {
+#wrapper {
     height: 100vh;
     width: 100%;
     background-color: rgb(3, 57, 128);
@@ -13,20 +13,21 @@
     
 
 header {
-    background-color: black;
-    width: 230px;
+    background-color: rgb(2, 13, 20);
+    width: 45px;
     height: calc(100vh - 90px);
 }
 
 main {
-    background-color: rgb(193, 243, 160);
-    width: calc(100% - 230px);
+    background-color: rgb(118, 101, 218);
+    width: calc(100% - 45px);
+    height: calc(100vh - 90px);
 }
 
-footer {
-    height: 90px;
-    width: 100%;
-    background-color: gray;
+
+
+li {
+    list-style-type: none;
 }
 
 /* COMMON */
@@ -42,15 +43,120 @@ footer {
     justify-content: space-between;
 }
 
-.flex {
-    display: flex;
+.f-column{
+    flex-direction: column;
 }
 
-.flex {
-    display: flex;
+.f-align-center{
+    align-items: center;
 }
 
-.flex {
-    display: flex;
+.f-end{
+    justify-content: end;
 }
+
+.f-justify-center {
+    justify-content: center;
+}
+
+.f-space-evenly {
+    justify-content: space-evenly;
+}
+
+/* sezione HEADER&NAV */
+.top-nav #main-logo {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(84, 174, 247);
+}
+
+.top-nav .home {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(29, 104, 216);
+}
+
+.top-nav .playlist {
+    display: none;
+}
+
+.bottom-nav .download-app {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(84, 174, 247);
+}
+
+/* sezione MAIN */
+
+/* sezione MINOR-CONTENT */
+.minor-content {
+    height: 70px;
+    background-color: rgb(216, 70, 184);
+}
+.minor-content .upgrade {
+    width: 120px;
+    height: 60%;
+    background-color: rgb(140, 45, 230);
+}
+
+/* sezione MAIN-CONTENT */
+.main-content {
+    background-color: rgb(175, 82, 194);
+}
+
+.main-content .disc-nav {
+    background-color: rgb(82, 66, 230);
+}
+
+.disc-container {
+    padding: 1rem;
+}
+
+.recently-played {
+    height: 100%;
+}
+
+.recently-played .disc {
+    height: 190px;
+    width: calc((100% / 2) - 1rem);
+    background-color: rgb(77, 28, 52);
+    border: 1px solid black;
+    margin: 0rem .5rem 1rem 0rem;
+}
+
+/* sezione FOOTER */
+
+footer {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(212, 184, 92);
+}
+
+
+
+
+
+
+
+/* !RESPONSIVE MOBILE FIRST */
+/* TABLET */
+@media screen and (min-width: 576px){
+    
+}
+
+/* TABLET */
+@media screen and (min-width: 768px){
+
+}
+
+/* TABLET */
+@media screen and (min-width: 992px){
+
+}
+
+/* TABLET */
+@media screen and (min-width: 1200px){
+
+}
+
 
