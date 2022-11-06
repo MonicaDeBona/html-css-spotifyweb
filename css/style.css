@@ -10,25 +10,22 @@
     width: 100%;
     background-color: rgb(3, 57, 128);
 }
-    
-
-header {
-    background-color: rgb(2, 13, 20);
-    width: 45px;
-    height: calc(100vh - 90px);
-}
-
-main {
-    background-color: rgb(118, 101, 218);
-    width: calc(100% - 45px);
-    height: calc(100vh - 90px);
-}
-
-
 
 li {
     list-style-type: none;
 }
+
+
+/* ROOT */
+:root{
+    --main-bg-color1: #141922;
+    --main-bg-color2:#080b12;
+    --main-bg-color3: #282828;
+    --main-bg-color4: black;
+    --text-color: white;
+    --text-color2: #787b80;
+}
+
 
 /* COMMON */
 .flex {
@@ -63,73 +60,74 @@ li {
     justify-content: space-evenly;
 }
 
-/* sezione HEADER&NAV */
-.top-nav #main-logo {
-    width: 100%;
-    height: 40px;
-    background-color: rgb(84, 174, 247);
+.f-stretch {
+    justify-content: stretch;
 }
 
-.top-nav .home {
-    width: 100%;
-    height: 120px;
-    background-color: rgb(29, 104, 216);
+.container {
+    width: 70%;
+    margin: 0 auto;
 }
 
-.top-nav .playlist {
-    display: none;
+.big-container {
+    width: 95%;
+    margin: 0 auto;
 }
 
-.bottom-nav .download-app {
-    width: 100%;
-    height: 60px;
-    background-color: rgb(84, 174, 247);
+
+/* HEADER&NAV */
+header {
+    background-color: rgb(2, 13, 20);
+    width: 200px;
+    height: calc(100vh - 90px);
 }
 
-/* sezione MAIN */
+
+/* MAIN */
+main {
+    background-color: rgb(118, 101, 218);
+    width: calc(100% - 200px);
+    height: calc(100vh - 90px);
+    overflow-y: scroll;
+}
 
 /* sezione MINOR-CONTENT */
 .minor-content {
+    width: 100%;
     height: 70px;
-    background-color: rgb(216, 70, 184);
+    background-color: var(--main-bg-color2);
 }
-.minor-content .upgrade {
-    width: 120px;
-    height: 60%;
-    background-color: rgb(140, 45, 230);
-}
+
 
 /* sezione MAIN-CONTENT */
 .main-content {
-    background-color: rgb(175, 82, 194);
+    background-color: var(--main-bg-color1);
+}
+/* !sezione MAIN-CONTENT */
+.disc img {
+    width: 100%;
+    display: block; /* !diamo display block alle img per togliere il gap che rimane sotto (le img sono inline come le lettere quindi rimane il gap che verrebbe occupato dalle lettere con discendenti */
 }
 
-.main-content .disc-nav {
-    background-color: rgb(82, 66, 230);
-}
-
-.disc-container {
-    padding: 1rem;
-}
-
-.recently-played {
+.disc figure img {
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
-.recently-played .disc {
-    height: 190px;
-    width: calc((100% / 2) - 1rem);
+
+.disc {
     background-color: rgb(77, 28, 52);
-    border: 1px solid black;
-    margin: 0rem .5rem 1rem 0rem;
+    margin: 0rem 1rem 1rem;
 }
 
-/* sezione FOOTER */
 
+/* FOOTER */
 footer {
     height: 90px;
     width: 100%;
-    background-color: rgb(212, 184, 92);
+    background-color:var(--main-bg-color3);
 }
 
 
@@ -138,25 +136,42 @@ footer {
 
 
 
-/* !RESPONSIVE MOBILE FIRST */
-/* TABLET */
-@media screen and (min-width: 576px){
-    
-}
+/* !RESPONSIVE DESKTOP FIRST */
 
-/* TABLET */
-@media screen and (min-width: 768px){
+    /* MD */
+    @media screen and (max-width: 992px){
+        .disc-container {
+            flex-wrap: wrap;
+        }
 
-}
+        
+        .disc {
+            width: calc((100% / 4) - 2rem);
+        }
+    }
 
-/* TABLET */
-@media screen and (min-width: 992px){
+    /* S */
+    @media screen and (max-width: 768px){
+        .disc {
+            width: calc((100% / 2) - 2rem);
+        }
+    }
 
-}
+    /* XS */
+    @media screen and (max-width: 576px){
+        header {
+            width: 50px;
+        }
 
-/* TABLET */
-@media screen and (min-width: 1200px){
+        main {
+            width: calc(100% - 50px);
+        }
+    }
 
-}
+
+
+
+
+
 
 

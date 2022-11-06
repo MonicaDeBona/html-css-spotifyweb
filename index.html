@@ -9,169 +9,179 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <div id="wrapper" class="flex">
+    <!-- contenitore per wrappare le sezioni principali a cui daremo flex per mettere in row header e main e wrap per mandare a capo il footer -->
+    <div id="wrapper" class="flex f-wrap ">
+        <!-- all'header daremo flex per tenera le due parti di nav in colonna -->
         <header class="flex f-column f-between">
+            <!-- la nav bar sarà divisa in 2 parti, una superiore (logo, home e playlist), una inferiore ( download app) -->
             <nav class="top-nav">
                 <div id="main-logo">
-                    LOGO
+                    
                 </div>
                 <div class="home">
-                    <ul>
-                        <li>
-                            lorem
-                        </li>
-                        <li>
-                            lorem
-                        </li>
-                        <li>
-                            lorem
-                        </li>
-                    </ul>
+                    
                 </div>
                 <div class="playlist">
-                    <ul>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                        <li>
-                            PLaylist
-                        </li>
-                    </ul>
+                    
                 </div>
             </nav>
             <nav class="bottom-nav">
                 <div class="download-app">
-                    lorem
+                    
                 </div>
             </nav>
         </header>
+
+        <!-- Il main sarà diviso in due sezioni principali e sarà in overflow per far apparire la scroll bar verticale -->
         <main>
+            
             <section id="main-section">
-                <section class="minor-content flex f-align-center f-end">
-                    <div class="upgrade flex f-align-center f-justify-center">
-                        Lorem
+
+                <!-- sezione UPGRADE -->
+                <section class="minor-content">
+                    <div id="upgrade">
+                        <!-- BUTTON in flex end e align center -->
                     </div>
                 </section>
+
+                <!-- sezione divisa in 4 parti, una nav-bar e tre sezioni per i dischi -->
                 <section class="main-content">
+
+                    <!-- nav-bar del main -->
                     <nav class="disc-nav">
-                        <ul class="flex f-space-evenly f-wrap">
-                            <li>
-                                LOREM IPSUM
-                            </li>
-                            <li>
-                                LOREM IPSUM
-                            </li>
-                            <li>
-                                LOREM 
-                            </li>
-                            <li>
-                                LOREM 
-                            </li>
-                            <li>
-                                LOREM IPSUM
-                            </li>
-                            <li>
-                                LOREM IPSUM
-                            </li>
-                        </ul>
-                    </nav>
-                    <section class="recently-played">
-                        <h2>
-                            LOREM
-                        </h2>
-                        <div class="disc-container flex f-wrap">
-                            <div class="disc">
-                                <div class="cover">
-
-                                </div>
-                                <div class="disc-title">
-
-                                </div>
-                            </div>
-                            <div class="disc">
-                                <div class="cover">
-
-                                </div>
-                                <div class="disc-title">
-                                    
-                                </div>
-                            </div>
-                            <div class="disc">
-                                <div class="cover">
-
-                                </div>
-                                <div class="disc-title">
-                                    
-                                </div>
-                            </div>
-                            <div class="disc">
-                                <div class="cover">
-
-                                </div>
-                                <div class="disc-title">
-                                    
-                                </div>
-                            </div>
-                            <div class="disc">
-                                <div class="cover">
-
-                                </div>
-                                <div class="disc-title">
-                                    
-                                </div>
-                            </div>
-                            <div class="disc">
-                                <div class="cover">
-
-                                </div>
-                                <div class="disc-title">
-                                    
-                                </div>
-                            </div>
+                        <div class="container">
                             
                         </div>
-                    </section>
-                    <section class="create-for">
+                    </nav>
 
-                    </section>
-                    <section class="most-popular">
+                    <section id="recently-played">
+                        <div class="big-container">
+                            <h2>
+                                
+                            </h2>
+                            <div class="disc-container flex">
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/metal_lifting.jpg" alt="">
+                                    </div>
+                                    <div class="disc-info">
 
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/stranger.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/aquietplace.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/split.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/cure.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/sinister.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+
+                    <section id="create-for">
+                        <div class="big-container">
+                            <h2>
+                                
+                            </h2>
+                            <div class="disc-container flex f-wrap">
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/radar.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <div class="disc-cover">
+                                        <img src="img/mixdaily.jpeg" alt="">
+                                    </div>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="most-popular">
+                        <div class="big-container">
+                            <h2>
+                                
+                            </h2>
+                            <div class="disc-container flex f-wrap">
+                                <div class="disc">
+                                    <figure class="disc-cover rounded-img">
+                                        <img src="img/youg.jpeg" alt="">
+                                    </figure>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <figure class="disc-cover rounded-img">
+                                        <img src="img/einaudi.jpeg" alt="">
+                                    </figure>
+                                    <div class="disc-info">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </section>
-            </section>
-        </main>
-    </div>
-    <footer>
-        <div class="left-footer">
 
-        </div>
-        <div class="center-footer">
-            
-        </div>
-        <div class="right-footer">
-            
-        </div>
-    </footer>
+            </section>
+
+        </main>
+
+        <!-- il footer sarà diviso in 3 parti, in flex con space between -->
+        <footer>
+            <div class="left-footer">
+
+            </div>
+            <div class="center-footer">
+                
+            </div>
+            <div class="right-footer">
+                
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
