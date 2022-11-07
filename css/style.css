@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 /* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 #wrapper {
@@ -89,6 +95,7 @@ main {
     width: calc(100% - 200px);
     height: calc(100vh - 90px);
     overflow-y: scroll;
+    color: white;
 }
 
 /* sezione MINOR-CONTENT */
@@ -103,10 +110,18 @@ main {
 .main-content {
     background-color: var(--main-bg-color1);
 }
-/* !sezione MAIN-CONTENT */
+
+/* sezione MAIN-CONTENT */
+.disc {
+    margin: 0rem 1rem  3rem 0rem;
+    text-align: center;
+    width: calc((100% / 6) - 1rem);
+}
+
 .disc img {
     width: 100%;
     display: block; /* !diamo display block alle img per togliere il gap che rimane sotto (le img sono inline come le lettere quindi rimane il gap che verrebbe occupato dalle lettere con discendenti */
+    max-width: 100%;
 }
 
 .disc figure img {
@@ -116,11 +131,34 @@ main {
     border-radius: 50%;
 }
 
-
-.disc {
-    background-color: rgb(77, 28, 52);
-    margin: 0rem 1rem 1rem;
+.main-content h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-color);
+    padding-bottom: .4rem;
 }
+
+#recently-played h2 {
+    padding: 1.4rem 0rem;
+}
+
+.main-content h3 {
+    font-weight: 800;
+    font-size: .85rem;
+    padding: 1rem 0rem .5rem;
+}
+
+.main-content h6 {
+    color: var(--text-color2);
+    font-weight: 800;
+    padding-bottom: 1.4rem;
+}
+
+
+
+
+
+
 
 
 /* FOOTER */
@@ -146,14 +184,14 @@ footer {
 
         
         .disc {
-            width: calc((100% / 4) - 2rem);
+            width: calc((100% / 4) - 1rem);
         }
     }
 
     /* S */
     @media screen and (max-width: 768px){
         .disc {
-            width: calc((100% / 2) - 2rem);
+            width: calc((100% / 2) - 1rem);
         }
     }
 
