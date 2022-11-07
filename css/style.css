@@ -317,9 +317,12 @@ footer img{
 
 .play {
     padding: .5rem 0rem;
+    justify-content: center;
 }
 
-.play i {
+
+
+.play :not(:last-child) {
     padding-right: 1.5rem;
 }
 
@@ -398,6 +401,7 @@ footer img{
         .disc {
             width: calc((100% / 2) - 1rem);
         }
+
     }
 
     /* XS */
@@ -409,6 +413,11 @@ footer img{
         main {
             width: calc(100% - 50px);
         }
+
+        .play {
+            justify-content: space-between;
+        }
+    
     }
 
 
