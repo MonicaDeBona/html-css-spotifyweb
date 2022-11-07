@@ -71,8 +71,9 @@ li {
 }
 
 .container {
-    width: 70%;
+    width: 55%;
     margin: 0 auto;
+    padding: 1rem 0rem .7rem;
 }
 
 .big-container {
@@ -112,6 +113,14 @@ main {
 }
 
 /* sezione MAIN-CONTENT */
+.disc-nav ul li {
+    color: var(--text-color2);
+    font-weight: 800;
+    font-size: .75rem;
+    padding-left: 1rem;
+    /* justify-content: space-between; */
+}
+
 .disc {
     margin: 0rem 1rem  3rem 0rem;
     text-align: center;
@@ -182,10 +191,18 @@ footer {
             flex-wrap: wrap;
         }
 
-        
         .disc {
             width: calc((100% / 4) - 1rem);
         }
+
+        .container {
+            width: 100%;
+        }
+
+        /* .disc-nav ul li{
+            justify-content: center;
+            padding-right: 2rem;
+        } */
     }
 
     /* S */
