@@ -84,11 +84,10 @@
             </nav>
         </header>
 
+
         <!-- Il main sarà diviso in due sezioni principali e sarà in overflow per far apparire la scroll bar verticale -->
         <main>
-            
             <section id="main-section">
-
                 <!-- sezione UPGRADE -->
                 <section class="minor-content">
                     <div id="upgrade" class="flex f-end">
@@ -99,10 +98,9 @@
                         </a>
                     </div>
                 </section>
-
                 <!-- sezione divisa in 4 parti, una nav-bar e tre sezioni per i dischi -->
+                
                 <section class="main-content">
-
                     <!-- nav-bar del main -->
                     <nav class="disc-nav">
                         <div class="container f-justify-center">
@@ -258,15 +256,51 @@
         </main>
 
         <!-- il footer sarà diviso in 3 parti, in flex con space between -->
-        <footer>
-            <div class="left-footer">
+        <footer class="flex">
+            <div class="left-footer flex f-align-center">
+                <img src="img/sinister.jpeg" alt="">
+                <div class="album-info">
+                    <h6>
+                        Sinister
+                    </h6>
+                    <p>
+                        Brano Nome
+                    </p>
+                </div>
+                <div class="left-footer-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
 
-            </div>
+            
             <div class="center-footer">
-                
+                <div class="play flex f-align-center f-justify-center">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+                <div class="time flex f-align-center f-between">
+                    <span>
+                        0:25
+                    </span>
+                    <div class="big-time-bar">
+                        <div class="small-time-bar"></div>
+                    </div>
+                    <span>
+                        4:20
+                    </span>
+                </div>
             </div>
-            <div class="right-footer">
-                
+            <div class="right-footer flex f-end f-align-center">
+                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="big-time-bar">
+                    <div class="small-time-bar"></div>
+                </div>
             </div>
         </footer>
     </div>
