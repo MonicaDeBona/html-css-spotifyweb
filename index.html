@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Awesome font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet"> 
-</head>
-<body>
+    </head>
+    <body>
+
     <!-- contenitore per wrappare le sezioni principali a cui daremo flex per mettere in row header e main e wrap per mandare a capo il footer -->
     <div id="wrapper" class="flex f-wrap ">
-        <!-- all'header daremo flex per tenera le due parti di nav in colonna -->
+
+        <!-- all'header daremo flex per tenera le due parti di nav in colonnae e spaziate tra loro -->
         <header class="flex f-column f-between">
+            
             <!-- la nav bar sarà divisa in 2 parti, una superiore (logo, home e playlist), una inferiore ( download app) -->
             <nav class="top-nav">
                 <div id="main-logo">
@@ -88,7 +95,7 @@
             <nav class="bottom-nav">
                 <div class="download-app">
                     <span class="flex f-align-center app">
-                        <img src="img/download.svg" alt="download icon">
+                        <img class="hov-pw" src="img/download.svg" alt="download icon">
                         <span class="mobile-hidden hov-pw">
                             Installa app
                         </span>
@@ -106,193 +113,193 @@
 
         <main>
             <!-- banner con bottone -->
-            <section class="banner">
-                    <div id="upgrade" class="flex f-end">
-                        <button class="hov-scale">
-                            EFFETTUA L'UPGRADE
-                        </button>
-                    </div>
-            </section>
+            <div class="banner">
+                <div id="upgrade" class="flex f-end">
+                    <button class="hov-scale">
+                        EFFETTUA L'UPGRADE
+                    </button>
+                </div>
+            </div>
                 
             <!-- sezione divisa in 4 parti, una nav-bar e tre sezioni per i dischi -->
             <section class="main-content">
                 <!-- nav-bar del main -->
                 <nav class="disc-nav">
-                        <div class="container">
-                            <ul class="flex f-wrap f-justify-center">
-                                <li>
-                                    <a class="hov-pw" href="#">
-                                        IN EVIDENZA
-                                    </a>
-                                    <div class="empty-div"></div>
-                                </li>
-                                <li>
-                                    <a class="hov-pw" href="#">
-                                        PODCAST
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="hov-pw" href="#">
-                                        CLASSIFICHE
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="hov-pw" href="#">
-                                        GENERI E MOOD
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="hov-pw" href="#">
-                                        NUOVE USCITE
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="hov-pw" href="#">
-                                        SCOPRI
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="container">
+                        <ul class="flex f-wrap f-justify-center">
+                            <li>
+                                <a class="hov-pw" href="#">
+                                    IN EVIDENZA
+                                </a>
+                                <div class="empty-div"></div>
+                            </li>
+                            <li>
+                                <a class="hov-pw" href="#">
+                                    PODCAST
+                                </a>
+                            </li>
+                            <li>
+                                <a class="hov-pw" href="#">
+                                    CLASSIFICHE
+                                </a>
+                            </li>
+                            <li>
+                                <a class="hov-pw" href="#">
+                                    GENERI E MOOD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="hov-pw" href="#">
+                                    NUOVE USCITE
+                                </a>
+                            </li>
+                            <li>
+                                <a class="hov-pw" href="#">
+                                    SCOPRI
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
                 <!-- recently played -->
                 <section id="recently">
-                        <div class="big-container">
-                            <h2>
-                                Recently played
-                            </h2>
-                            <div class="disc-container flex">
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/metal_lifting.jpg" alt="heavy metal album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>Heavy Metal</h3>
-                                        <h6>Subtitle</h6>
-                                    </div>
+                    <div class="big-container">
+                        <h2>
+                            Recently played
+                        </h2>
+                        <div class="disc-container flex">
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/metal_lifting.jpg" alt="heavy metal album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
                                 </div>
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/stranger.jpeg" alt="stranger thinghs serie album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>Stranger Thinghs, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
-                                        <h6>Kyle Dixon & Micheal Stain</h6>
-                                    </div>
+                                <div class="disc-info">
+                                    <h3>Heavy Metal</h3>
+                                    <h6>Subtitle</h6>
                                 </div>
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/aquietplace.jpeg" alt="A quiet place movie album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>A quiet Place</h3>
-                                        <h6>Subtitle</h6>
-                                    </div>
+                            </div>
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/stranger.jpeg" alt="stranger thinghs serie album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
                                 </div>
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/split.jpeg" alt="split movie album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>Split</h3>
-                                        <h6>Subtitle</h6>
-                                    </div>
+                                <div class="disc-info">
+                                    <h3>Stranger Thinghs, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                    <h6>Kyle Dixon & Micheal Stain</h6>
                                 </div>
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/cure.jpeg" alt="cure album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>A cure for wellness</h3>
-                                        <h6>Subtitle</h6>
-                                    </div>
+                            </div>
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/aquietplace.jpeg" alt="A quiet place movie album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
                                 </div>
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/sinister.jpeg" alt="sinister movie album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>Sinister</h3>
-                                        <h6>Subtitle</h6>
-                                    </div>
+                                <div class="disc-info">
+                                    <h3>A quiet Place</h3>
+                                    <h6>Subtitle</h6>
+                                </div>
+                            </div>
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/split.jpeg" alt="split movie album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
+                                </div>
+                                <div class="disc-info">
+                                    <h3>Split</h3>
+                                    <h6>Subtitle</h6>
+                                </div>
+                            </div>
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/cure.jpeg" alt="cure album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
+                                </div>
+                                <div class="disc-info">
+                                    <h3>A cure for wellness</h3>
+                                    <h6>Subtitle</h6>
+                                </div>
+                            </div>
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/sinister.jpeg" alt="sinister movie album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
+                                </div>
+                                <div class="disc-info">
+                                    <h3>Sinister</h3>
+                                    <h6>Subtitle</h6>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
                 <!-- create-for-you-->
                 <section id="create-for">
-                        <div class="big-container">
-                            <h2>
-                                Creato per Monica
-                            </h2>
-                            <h6>
-                                Più ascolti, più accurati saranno i suggerimenti
-                            </h6>
-                            <div class="disc-container flex f-wrap">
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/radar.jpeg" alt="release radar album">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>
-                                            Release Radar
-                                        </h3>
-                                    </div>
+                    <div class="big-container">
+                        <h2>
+                            Creato per Monica
+                        </h2>
+                        <h6>
+                            Più ascolti, più accurati saranno i suggerimenti
+                        </h6>
+                        <div class="disc-container flex f-wrap">
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/radar.jpeg" alt="release radar album">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
                                 </div>
-                                <div class="disc">
-                                    <div class="disc-cover p-relative">
-                                        <img src="img/mixdaily.jpeg" alt="mix music album">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </div>
-                                    <div class="disc-info">
-                                        <h3>
-                                            Daily Mix 1
-                                        </h3>
-                                    </div>
+                                <div class="disc-info">
+                                    <h3>
+                                        Release Radar
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="disc">
+                                <div class="disc-cover p-relative">
+                                    <img src="img/mixdaily.jpeg" alt="mix music album">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
+                                </div>
+                                <div class="disc-info">
+                                    <h3>
+                                        Daily Mix 1
+                                    </h3>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
                 <!-- most-popular-->
                 <section id="most-popular">
-                        <div class="big-container">
-                            <h2>
-                                Artisti più popolari
-                            </h2>
-                            <h6>
-                                Più ascolti, più accurati saranno i suggerimenti
-                            </h6>
-                            <div class="disc-container flex f-wrap">
-                                <div class="disc">
-                                    <figure class="disc-cover rounded-img p-relative">
-                                        <img src="img/youg.jpeg" alt="lana del rey album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </figure>
-                                    <div class="disc-info">
-                                        <h3>
-                                            Lana Del Rey
-                                        </h3>
-                                    </div>
+                    <div class="big-container">
+                        <h2>
+                            Artisti più popolari
+                        </h2>
+                        <h6>
+                            Più ascolti, più accurati saranno i suggerimenti
+                        </h6>
+                        <div class="disc-container flex f-wrap">
+                            <div class="disc">
+                                <figure class="disc-cover rounded-img p-relative">
+                                    <img src="img/youg.jpeg" alt="lana del rey album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
+                                </figure>
+                                <div class="disc-info">
+                                    <h3>
+                                        Lana Del Rey
+                                    </h3>
                                 </div>
-                                <div class="disc">
-                                    <figure class="disc-cover rounded-img p-relative">
-                                        <img src="img/einaudi.jpeg" alt="ludovico einaudi album cover">
-                                        <i class="fa-regular fa-circle-play p-absolute"></i>
-                                    </figure>
-                                    <div class="disc-info">
-                                        <h3>
-                                            Ludovico Einaudi
-                                        </h3>
-                                    </div>
+                            </div>
+                            <div class="disc">
+                                <figure class="disc-cover rounded-img p-relative">
+                                    <img src="img/einaudi.jpeg" alt="ludovico einaudi album cover">
+                                    <i class="fa-regular fa-circle-play p-absolute"></i>
+                                </figure>
+                                <div class="disc-info">
+                                    <h3>
+                                        Ludovico Einaudi
+                                    </h3>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
             </section>
         </main>
