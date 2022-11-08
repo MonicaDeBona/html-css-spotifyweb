@@ -218,7 +218,7 @@ main {
 .banner button {
     background-color: var(--main-bg-color2);
     border-radius: 30px;
-    border: 1px solid white;
+    border: 1px solid var(--text-color);
     color: var(--text-color);
     font-size: .7rem;
     font-weight: 800;
@@ -305,8 +305,11 @@ main {
 }
 
 .disc-cover:hover img {
+    transition: 1s;
     opacity: 0.5;
     cursor: pointer;
+    transform: scale(1.1);
+    border-radius: 2%;
 }
 
 
