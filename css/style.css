@@ -25,8 +25,8 @@ a {
 }
 
 a:visited {
-    text-decoration: none;
     color: var(--text-color2);
+    text-decoration: none;
 }
 
 
@@ -79,8 +79,8 @@ a:visited {
 }
 
 .big-container {
-    width: 95%;
     margin: 0 auto;
+    width: 95%;
 }
 
 .p-relative {
@@ -92,8 +92,8 @@ a:visited {
 }
 
 .hov-pw:hover{
-    cursor: pointer;
     color: var(--text-color);
+    cursor: pointer;
 }
 
 .hov-scale:hover{
@@ -101,9 +101,9 @@ a:visited {
 }
 
 .hov-u:hover {
-    text-decoration: underline;
     color: var(--text-color);
     cursor: pointer;
+    text-decoration: underline;
 }
 
 
@@ -111,10 +111,10 @@ a:visited {
 /* HEADER&NAV */
 header {
     background-color: var(--main-bg-color4);
-    width: 200px;
+    font-size: .4rem;
     height: calc(100vh - 90px);
     padding: 1rem 1rem 0;
-    font-size: .4rem;
+    width: 200px;
 }
 
 
@@ -145,8 +145,8 @@ header .top-nav .home ul li{
 }
 
 header .top-nav .home img {
-    width: 1.5rem;
     margin-right: .4rem;
+    width: 1.5rem;
 }
 
 .padd {
@@ -184,14 +184,14 @@ header .top-nav .playlist h4{
 }
 
 .bottom-nav .user {
-    font-size: .9rem;
     color: var(--text-color);
+    font-size: .9rem;
     padding: 1rem 0 .5rem;
 }
 
 .bottom-nav span img {
-    width: 1rem;
     margin-right: .5rem;
+    width: 1rem;
 }
 
 
@@ -199,10 +199,10 @@ header .top-nav .playlist h4{
 /* MAIN */
 main {
     background-color: rgb(118, 101, 218);
-    width: calc(100% - 200px);
+    color: white;
     height: calc(100vh - 90px);
     overflow-y: scroll;
-    color: white;
+    width: calc(100% - 200px);
 }
 
 /* BANNER */
@@ -211,18 +211,18 @@ main {
 }
 
 #upgrade {
-    padding: 1.5rem .4rem;
     overflow: hidden;
+    padding: 1.5rem .4rem;
 }
 
 .banner button {
-    padding: .5rem 2rem;
-    border-radius: 30px;
     background-color: var(--main-bg-color2);
-    color: var(--text-color);
+    border-radius: 30px;
     border: 1px solid white;
+    color: var(--text-color);
     font-size: .7rem;
     font-weight: 800;
+    padding: .5rem 2rem;
 }
 
 
@@ -304,11 +304,7 @@ main {
     display: block;
 }
 
-/* .disc-cover i:hover img{
-    opacity: 0.5;
-} */
-
-.main-content .disc img:hover{
+.disc-cover:hover img {
     opacity: 0.5;
     cursor: pointer;
 }
