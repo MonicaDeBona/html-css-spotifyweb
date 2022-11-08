@@ -75,14 +75,6 @@ a:visited {
     justify-content: center;
 }
 
-.f-space-evenly {
-    justify-content: space-evenly;
-}
-
-.f-stretch {
-    justify-content: stretch;
-}
-
 .container {
     width: 100%;
     margin: 0 auto;
@@ -119,20 +111,12 @@ a:visited {
 
 
 
-
-
-
-
-
-
-
-
 /* HEADER&NAV */
 header {
     background-color: var(--main-bg-color4);
     width: 200px;
     height: calc(100vh - 90px);
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 0rem;
     font-weight: 800;
     font-size: .4rem;
 }
@@ -283,10 +267,13 @@ main {
 
 
 .disc-nav ul li {
-    color: var(--text-color2);
     font-weight: 800;
     font-size: .75rem;
     padding: 0rem .5rem;
+}
+
+.disc-nav ul li a {
+    color: var(--text-color2);
 }
 
 .disc {
