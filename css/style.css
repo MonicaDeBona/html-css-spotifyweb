@@ -149,6 +149,13 @@ header .top-nav .home img {
     width: 1.5rem;
 }
 
+.glass,
+.home-img,
+.library,
+.download-img {
+    filter: invert(25%);
+}
+
 .padd {
     padding-top: .5rem;
 }
@@ -193,7 +200,7 @@ header .top-nav .playlist h4{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: var(--text-color3);
+    background-color: #808080;
     margin-right: .5rem;
 }
 
