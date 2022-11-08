@@ -7,6 +7,9 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <!-- contenitore per wrappare le sezioni principali a cui daremo flex per mettere in row header e main e wrap per mandare a capo il footer -->
@@ -17,39 +20,39 @@
             <nav class="top-nav">
                 <div id="main-logo">
                     <a href="#">
-                        <img class="logo-big d-none" src="img/logo.svg" alt="">
-                        <img class="logo-small" src="img/logo-small.svg" alt="">
+                        <img class="logo-big mobile-hidden" src="img/logo.svg" alt="spotify text and image logo ">
+                        <img class="logo-small" src="img/logo-small.svg" alt="spotify image logo">
                     </a>
                 </div>
                 <div class="home">
                     <ul>
-                        <li class="flex f-align-center">
+                        <li class="flex f-align-center padd">
                             <a href="#">
-                                <img class="home-img" src="img/home.svg" alt="">
+                                <img class="home-img" src="img/home.svg" alt="home icon">
                             </a>
-                            <span class="d-none hov-pw">
+                            <span class="mobile-hidden hov-pw">
                                 Home
                             </span>
                         </li>
                         <li class="flex f-align-center">
                             <a href="#">
-                                <img src="img/search.svg" alt="">
+                                <img src="img/search.svg" alt="magnifying glass icon">
                             </a>
-                            <span class="d-none hov-pw">
+                            <span class="mobile-hidden hov-pw">
                                 Cerca
                             </span>
                         </li>
                         <li class="flex f-align-center">
                             <a href="#">
-                                <img src="img/libreria.svg" alt="">
+                                <img src="img/libreria.svg" alt="library icon">
                             </a>
-                            <span class="d-none hov-pw">
+                            <span class="mobile-hidden hov-pw">
                                 La tua libreria
                             </span>
                         </li>
                     </ul>
                 </div>
-                <div class="playlist d-none">
+                <div class="playlist mobile-hidden">
                     <h4>
                         PLAYLIST
                     </h4>
@@ -85,15 +88,15 @@
             <nav class="bottom-nav">
                 <div class="download-app">
                     <span class="flex f-align-center app">
-                        <img src="img/download.svg" alt="">
-                        <span class="d-none hov-pw">
+                        <img src="img/download.svg" alt="download icon">
+                        <span class="mobile-hidden hov-pw">
                             Installa app
                         </span>
                     </span>
-                    <hr class="d-none">
+                    <hr class="mobile-hidden">
                     <span class="flex f-align-center user">
-                        <img src="img/profile.svg" alt="">
-                        <span class="d-none">
+                        <img src="img/profile.svg" alt="user profile icon">
+                        <span class="mobile-hidden">
                             Monica
                         </span>
                     </span>
@@ -101,24 +104,21 @@
             </nav>
         </header>
 
-
-        <!-- Il main sarà diviso in due sezioni principali e sarà in overflow per far apparire la scroll bar verticale -->
         <main>
-            <section id="main-section">
-                <!-- sezione UPGRADE -->
-                <section class="minor-content">
+            <!-- banner con bottone -->
+            <section class="banner">
                     <div id="upgrade" class="flex f-end">
-                            <button class="hov-scale">
-                                EFFETTUA L'UPGRADE
-                            </button>
+                        <button class="hov-scale">
+                            EFFETTUA L'UPGRADE
+                        </button>
                     </div>
-                </section>
-                <!-- sezione divisa in 4 parti, una nav-bar e tre sezioni per i dischi -->
+            </section>
                 
-                <section class="main-content">
-                    <!-- nav-bar del main -->
-                    <nav class="disc-nav">
-                        <div class="container ">
+            <!-- sezione divisa in 4 parti, una nav-bar e tre sezioni per i dischi -->
+            <section class="main-content">
+                <!-- nav-bar del main -->
+                <nav class="disc-nav">
+                        <div class="container">
                             <ul class="flex f-wrap f-justify-center">
                                 <li>
                                     <a class="hov-pw" href="#">
@@ -133,7 +133,7 @@
                                 </li>
                                 <li>
                                     <a class="hov-pw" href="#">
-                                        CLASSIFFICHE
+                                        CLASSIFICHE
                                     </a>
                                 </li>
                                 <li>
@@ -153,9 +153,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </nav>
-
-                    <section id="recently-played">
+                </nav>
+                <!-- recently played -->
+                <section id="recently">
                         <div class="big-container">
                             <h2>
                                 Recently played
@@ -163,7 +163,7 @@
                             <div class="disc-container flex">
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/metal_lifting.jpg" alt="">
+                                        <img src="img/metal_lifting.jpg" alt="heavy metal album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/stranger.jpeg" alt="">
+                                        <img src="img/stranger.jpeg" alt="stranger thinghs serie album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/aquietplace.jpeg" alt="">
+                                        <img src="img/aquietplace.jpeg" alt="A quiet place movie album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
@@ -193,7 +193,7 @@
                                 </div>
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/split.jpeg" alt="">
+                                        <img src="img/split.jpeg" alt="split movie album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
@@ -203,7 +203,7 @@
                                 </div>
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/cure.jpeg" alt="">
+                                        <img src="img/cure.jpeg" alt="cure album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
@@ -213,7 +213,7 @@
                                 </div>
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/sinister.jpeg" alt="">
+                                        <img src="img/sinister.jpeg" alt="sinister movie album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
@@ -223,9 +223,9 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-
-                    <section id="create-for">
+                </section>
+                <!-- create-for-you-->
+                <section id="create-for">
                         <div class="big-container">
                             <h2>
                                 Creato per Monica
@@ -236,27 +236,31 @@
                             <div class="disc-container flex f-wrap">
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/radar.jpeg" alt="">
+                                        <img src="img/radar.jpeg" alt="release radar album">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
-                                        <h3>Release Radar</h3>
+                                        <h3>
+                                            Release Radar
+                                        </h3>
                                     </div>
                                 </div>
                                 <div class="disc">
                                     <div class="disc-cover p-relative">
-                                        <img src="img/mixdaily.jpeg" alt="">
+                                        <img src="img/mixdaily.jpeg" alt="mix music album">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </div>
                                     <div class="disc-info">
-                                        <h3>Daily Mix 1</h3>
+                                        <h3>
+                                            Daily Mix 1
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-
-                    <section id="most-popular">
+                </section>
+                <!-- most-popular-->
+                <section id="most-popular">
                         <div class="big-container">
                             <h2>
                                 Artisti più popolari
@@ -267,34 +271,35 @@
                             <div class="disc-container flex f-wrap">
                                 <div class="disc">
                                     <figure class="disc-cover rounded-img p-relative">
-                                        <img src="img/youg.jpeg" alt="">
+                                        <img src="img/youg.jpeg" alt="lana del rey album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </figure>
                                     <div class="disc-info">
-                                        <h3>Lana Del Rey</h3>
+                                        <h3>
+                                            Lana Del Rey
+                                        </h3>
                                     </div>
                                 </div>
                                 <div class="disc">
                                     <figure class="disc-cover rounded-img p-relative">
-                                        <img src="img/einaudi.jpeg" alt="">
+                                        <img src="img/einaudi.jpeg" alt="ludovico einaudi album cover">
                                         <i class="fa-regular fa-circle-play p-absolute"></i>
                                     </figure>
                                     <div class="disc-info">
-                                        <h3>Ludovico Einaudi</h3>
+                                        <h3>
+                                            Ludovico Einaudi
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-
                 </section>
-
             </section>
-
         </main>
 
-        <!-- il footer sarà diviso in 3 parti, in flex con space between -->
+        <!-- FOOTER-->
         <footer class="flex">
+            <!-- left footer -->
             <div class="left-footer flex f-align-center">
                 <img src="img/sinister.jpeg" alt="">
                 <div class="album-info">
@@ -310,8 +315,7 @@
                     <i class="fa-regular fa-folder hov-pw"></i>
                 </div>
             </div>
-
-            
+            <!-- center footer -->
             <div class="center-footer">
                 <div class="play flex f-align-center ">
                     <i class="fa-solid fa-shuffle"></i>
@@ -329,13 +333,13 @@
                         <div class="c-green-time-bar p-absolute p-relative">
                             <div class="c-small-circle p-absolute"></div>
                         </div>
-                        
                     </div>
                     <span>
                         4:20
                     </span>
                 </div>
             </div>
+            <!-- right footer -->
             <div class="right-footer flex f-end f-align-center">
                 <i class="fa-solid fa-display"></i>
                 <i class="fa-solid fa-display"></i>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-
 /* RESET */
 *,
 *::before,
@@ -10,13 +8,12 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #wrapper {
     height: 100vh;
     width: 100%;
-    background-color: rgb(3, 57, 128);
 }
 
 li {
@@ -68,7 +65,7 @@ a:visited {
 }
 
 .f-end{
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .f-justify-center {
@@ -76,9 +73,9 @@ a:visited {
 }
 
 .container {
-    width: 100%;
     margin: 0 auto;
-    padding: 1rem 0rem .7rem;
+    padding: 1rem 0 .7rem;
+    width: 100%;
 }
 
 .big-container {
@@ -116,11 +113,12 @@ header {
     background-color: var(--main-bg-color4);
     width: 200px;
     height: calc(100vh - 90px);
-    padding: 1rem 1rem 0rem;
-    font-weight: 800;
+    padding: 1rem 1rem 0;
     font-size: .4rem;
 }
 
+
+/* upper nav*/
 #main-logo img {
     width: 100px;   
 }
@@ -130,50 +128,44 @@ header {
 }
 
 header ul li {
-    color: var(--text-color2);
     font-size: 0.75rem;
 } 
 
+header ul li,
 header span {
     color: var(--text-color2);
 }
 
-.empty-div {
-    border: 1px solid #ccff31;
-    margin: 0rem 1.5rem;
-}
-
-.home {
+header .top-nav .home {
     margin-top: 1.4rem;
 }
 
-.home ul li{
+header .top-nav .home ul li{
     padding-bottom: .7rem;
 }
 
-.home ul li:first-child{
-    color: var(--text-color)
-}
-
-.home img {
+header .top-nav .home img {
     width: 1.5rem;
-    margin-right: .4rem
+    margin-right: .4rem;
 }
 
-header h4{
+.padd {
+    padding-top: .5rem;
+}
+
+header .top-nav .playlist h4{
     color: var(--text-color);
     font-size: .9rem;
-    font-weight: 800;
-    padding: 1rem 0rem .5rem;
+    padding: 1rem 0 .5rem;
 } 
-
-.fa-square-plus {
-    font-size: 2.5rem;
-    padding-right: .5rem;
-}
 
 .playlist span {
     font-size: .9rem;
+}
+
+.playlist span .fa-square-plus {
+    font-size: 2.5rem;
+    padding-right: .5rem;
 }
 
 .playlist ul {
@@ -184,6 +176,8 @@ header h4{
     padding-bottom: 1rem;
 }
 
+
+/* lower nav*/
 .bottom-nav .app {
     font-size: .75rem;
     padding-bottom: .5rem;
@@ -192,15 +186,13 @@ header h4{
 .bottom-nav .user {
     font-size: .9rem;
     color: var(--text-color);
-    padding: 1rem 0rem .5rem;
+    padding: 1rem 0 .5rem;
 }
 
 .bottom-nav span img {
     width: 1rem;
     margin-right: .5rem;
 }
-
-
 
 
 
@@ -213,11 +205,9 @@ main {
     color: white;
 }
 
-/* sezione MINOR-CONTENT */
-.minor-content {
-    width: 100%;
+/* BANNER */
+.banner {
     background-color: var(--main-bg-color2);
-    
 }
 
 #upgrade {
@@ -225,16 +215,15 @@ main {
     overflow: hidden;
 }
 
-.minor-content button {
+.banner button {
     padding: .5rem 2rem;
     border-radius: 30px;
     background-color: var(--main-bg-color2);
     color: var(--text-color);
     border: 1px solid white;
-    font-weight: 800;
     font-size: .7rem;
+    font-weight: bold;
 }
-
 
 
 /* sezione MAIN-CONTENT */
@@ -242,9 +231,64 @@ main {
     background-color: var(--main-bg-color1);
 }
 
+.main-content h2 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    padding-bottom: .4rem;
+    font-weight: 800;
+}
+
+.main-content h3 {
+    font-size: .85rem;
+    padding: 1rem 0 .5rem;
+}
+
+.main-content h6 {
+    color: var(--text-color2);
+    padding-bottom: 1.4rem;
+}
+
+
+/* main's nav */
+.disc-nav ul li {
+    font-size: .70rem;
+    padding: 0 .5rem;
+}
+
+.disc-nav ul li a {
+    color: var(--text-color2);
+}
+
+.empty-div {
+    border: 1px solid #ccff31;
+    margin: 0 1.5rem;
+}
+
+/* sezione recently-played - create for - most popular */
+#recently h2 {
+    padding: 1.4rem 0;
+}
+
+.disc {
+    margin: 0 1rem  1.5rem 0;
+    text-align: center;
+    width: calc((100% / 6) - 1rem);
+}
+
+.disc img {
+    width: 100%;
+    display: block; /* !diamo display block alle img per togliere il gap che rimane sotto (le img sono inline come le lettere quindi rimane il gap che verrebbe occupato dalle lettere con discendenti */
+    max-width: 100%;
+}
+
+.disc figure img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
 
 .disc-cover i {
-    transform: translate;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -261,64 +305,9 @@ main {
 }
 
 .main-content .disc img:hover{
-    opacity: 50%;
+    opacity: 0.5;
     cursor: pointer;
 }
-
-
-.disc-nav ul li {
-    font-weight: 800;
-    font-size: .75rem;
-    padding: 0rem .5rem;
-}
-
-.disc-nav ul li a {
-    color: var(--text-color2);
-}
-
-.disc {
-    margin: 0rem 1rem  1.5rem 0rem;
-    text-align: center;
-    width: calc((100% / 6) - 1rem);
-}
-
-.disc img {
-    width: 100%;
-    display: block; /* !diamo display block alle img per togliere il gap che rimane sotto (le img sono inline come le lettere quindi rimane il gap che verrebbe occupato dalle lettere con discendenti */
-    max-width: 100%;
-}
-
-
-.disc figure img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.main-content h2 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--text-color);
-    padding-bottom: .4rem;
-}
-
-#recently-played h2 {
-    padding: 1.4rem 0rem;
-}
-
-.main-content h3 {
-    font-weight: 800;
-    font-size: .85rem;
-    padding: 1rem 0rem .5rem;
-}
-
-.main-content h6 {
-    color: var(--text-color2);
-    font-weight: 800;
-    padding-bottom: 1.4rem;
-}
-
 
 
 
@@ -327,7 +316,7 @@ footer {
     height: 90px;
     width: 100%;
     background-color:var(--main-bg-color3);
-    padding: 0rem .5rem;
+    padding: 0 .5rem;
     color: var(--text-color);
 }
 
@@ -343,12 +332,10 @@ footer {
 
 .left-footer h6 {
     font-size: .7rem;
-    font-weight: 800;
 }
 
 .left-footer p {
     font-size: .6rem;
-    font-weight: 800;
     color: var(--text-color2);
 }
 
@@ -369,7 +356,7 @@ footer img{
 }
 
 .play {
-    padding: .5rem 0rem;
+    padding: .5rem 0;
     justify-content: center;
 }
 
@@ -383,13 +370,12 @@ footer img{
 
 .time span {
     font-size: .6rem;
-    font-weight: 800;
 }
 
 .c-big-time-bar {
     background-color: var(--text-color2);
     width: 80%;
-    margin: 0rem 1rem;
+    margin: 0 1rem;
     border-radius: 10%;
 }
 
@@ -442,7 +428,7 @@ footer img{
 .r-big-time-bar {
     background-color: var(--text-color2);
     width: 80px;
-    margin: 0rem 1rem;
+    margin: 0 1rem;
     border-radius: 10%;
 }
 
@@ -488,14 +474,9 @@ footer img{
 
 
 
-
-
-
-
-
 /* !RESPONSIVE DESKTOP FIRST */
 
-/* MD */
+    /* MD */
     @media screen and (max-width: 992px){
         .disc-container {
             flex-wrap: wrap;
@@ -506,8 +487,6 @@ footer img{
         }
     }
 
-
-
     /* S */
     @media screen and (max-width: 768px){
         .disc {
@@ -515,15 +494,17 @@ footer img{
         }
     }
 
-
-
     /* XS */
     @media screen and (max-width: 576px){
         header {
             width: 50px;
-            padding: 1rem 0rem;
+            padding: 1rem 0;
             align-items: center;
             
+        }
+
+        main {
+            width: calc(100% - 50px);
         }
 
         #main-logo .logo-big {
@@ -535,22 +516,21 @@ footer img{
             width: 25px;
         }
 
-        .home img {
-            margin-right: 0rem;
+        header .top-nav .home img {
+            margin-right: 0;
+        }
+
+        .padd {
+            padding-top: 0;
         }
 
         .bottom-nav span img {
-            margin-right: 0rem;
+            margin-right: 0;
         }
 
-        .d-none {
+        .mobile-hidden {
             display: none;
         }
-
-        main {
-            width: calc(100% - 50px);
-        }
-
     }
 
 
