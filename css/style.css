@@ -183,13 +183,22 @@ header .top-nav .playlist h4{
     padding-bottom: .5rem;
 }
 
-.bottom-nav .user {
+.bottom-nav .profile {
     color: var(--text-color);
     font-size: .9rem;
     padding: 1rem 0 .5rem;
 }
 
-.bottom-nav span img {
+.user-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--text-color3);
+    margin-right: .5rem;
+}
+
+
+.download-img {
     margin-right: .5rem;
     width: 1rem;
 }
@@ -527,7 +536,13 @@ footer img{
             padding-top: 0;
         }
 
-        .bottom-nav span img {
+        .download-app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bottom-nav div img {
             margin-right: 0;
         }
 
