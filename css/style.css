@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 /* RESET */
-*{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,6 +23,15 @@ li {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--text-color2);
+}
+
 
 /* ROOT */
 :root{
@@ -31,6 +42,7 @@ li {
     --text-color: white;
     --text-color2: #787b80;
     --text-color3: #d2d2d2;
+    --text-color4: #ccff31;
 }
 
 
@@ -72,7 +84,7 @@ li {
 }
 
 .container {
-    width: 55%;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem 0rem .7rem;
 }
@@ -81,6 +93,37 @@ li {
     width: 95%;
     margin: 0 auto;
 }
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.hov-pw:hover{
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.hov-scale:hover{
+    transform: scale(1.1);
+}
+
+.hov-u:hover {
+    text-decoration: underline;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -95,11 +138,11 @@ header {
 }
 
 #main-logo img {
-    width: 7.5rem;
+    width: 100px;   
 }
 
 #main-logo .logo-small {
-    width: 2rem;
+    display: none;
 }
 
 header ul li {
@@ -111,6 +154,10 @@ header span {
     color: var(--text-color2);
 }
 
+.empty-div {
+    border: 1px solid #ccff31;
+    margin: 0rem 1.5rem;
+}
 
 .home {
     margin-top: 1.4rem;
@@ -128,7 +175,6 @@ header span {
     width: 1.5rem;
     margin-right: .4rem
 }
-
 
 header h4{
     color: var(--text-color);
@@ -170,9 +216,7 @@ header h4{
     margin-right: .5rem;
 }
 
-.fa-circle-user {
-    font-size: 1.5rem;
-}
+
 
 
 
@@ -194,12 +238,13 @@ main {
 
 #upgrade {
     padding: 1.5rem .4rem;
+    overflow: hidden;
 }
 
 .minor-content button {
     padding: .5rem 2rem;
     border-radius: 30px;
-    background-color: var(--main-bg-color4);
+    background-color: var(--main-bg-color2);
     color: var(--text-color);
     border: 1px solid white;
     font-weight: 800;
@@ -207,18 +252,36 @@ main {
 }
 
 
+
 /* sezione MAIN-CONTENT */
 .main-content {
     background-color: var(--main-bg-color1);
 }
 
-/* sezione MAIN-CONTENT */
+/* .main-content .disc i {
+    position: absolute;
+    transform: translate;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-size: 3rem;
+} */
+
+.main-content .disc i{
+    display: none;
+}
+
+.main-content .disc img:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .disc-nav ul li {
     color: var(--text-color2);
     font-weight: 800;
     font-size: .75rem;
-    padding-left: 1rem;
-    /* justify-content: space-between; */
+    padding: 0rem .5rem;
 }
 
 .disc {
@@ -232,6 +295,7 @@ main {
     display: block; /* !diamo display block alle img per togliere il gap che rimane sotto (le img sono inline come le lettere quindi rimane il gap che verrebbe occupato dalle lettere con discendenti */
     max-width: 100%;
 }
+
 
 .disc figure img {
     width: 100%;
@@ -282,6 +346,7 @@ footer {
 
 .center-footer {
     flex-basis: 60%;
+    padding: .5rem 1rem;
 }
 
 .left-footer h6 {
@@ -302,25 +367,19 @@ footer img{
 }
 
 .left-footer .album-info {
-    padding-right: 1rem;
+    padding-right: .5rem;
 }
 
 .left-footer-icon i {
-    padding-left: .5rem;
+    padding-left: .8rem;
     color: var(--text-color2);
     font-size: .8rem;
-}
-
-.center-footer {
-    padding: .5rem 0rem;
 }
 
 .play {
     padding: .5rem 0rem;
     justify-content: center;
 }
-
-
 
 .play :not(:last-child) {
     padding-right: 1.5rem;
@@ -335,17 +394,49 @@ footer img{
     font-weight: 800;
 }
 
-.center-footer .big-time-bar {
+.c-big-time-bar {
     background-color: var(--text-color2);
     width: 80%;
     margin: 0rem 1rem;
     border-radius: 10%;
 }
 
-.center-footer .small-time-bar {
+.c-small-time-bar {
     border: 2px solid #d2d2d2;
-    width: 25%;
+    width: 100px;
     border-radius: 5%;
+}
+
+.c-green-time-bar {
+    border: 2px solid var(--text-color4);
+    width: 100px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.c-big-time-bar .c-green-time-bar{
+    display: none;
+}
+
+.c-big-time-bar:hover .c-green-time-bar{
+    display: block;
+}
+
+.c-small-circle {
+    background-color: var(--text-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 90px;
+}
+
+.c-big-time-bar .c-small-circle {
+    display: none;
+}
+
+.c-big-time-bar:hover .c-small-circle {
+    display: block;
 }
 
 .right-footer i {
@@ -354,17 +445,49 @@ footer img{
     font-size: .7rem;
 }
 
-.right-footer .big-time-bar {
+.r-big-time-bar {
     background-color: var(--text-color2);
-    width: 25%;
+    width: 80px;
     margin: 0rem 1rem;
     border-radius: 10%;
 }
 
-.right-footer .small-time-bar {
+.r-small-time-bar {
     border: 2px solid #d2d2d2;
-    width: 30%;
+    width: 30px;
     border-radius: 5%;
+}
+
+.r-green-time-bar {
+    border: 2px solid var(--text-color4);
+    width: 30px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.r-big-time-bar .r-green-time-bar{
+    display: none;
+}
+
+.r-big-time-bar:hover .r-green-time-bar{
+    display: block;
+}
+
+.r-small-circle {
+    background-color: var(--text-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 20px;
+}
+
+.r-big-time-bar  .c-small-circle {
+    display: none;
+}
+
+.r-big-time-bar:hover .c-small-circle {
+    display: block;
 }
 
 
@@ -376,7 +499,7 @@ footer img{
 
 /* !RESPONSIVE DESKTOP FIRST */
 
-    /* MD */
+/* MD */
     @media screen and (max-width: 992px){
         .disc-container {
             flex-wrap: wrap;
@@ -385,39 +508,53 @@ footer img{
         .disc {
             width: calc((100% / 4) - 1rem);
         }
-
-        .container {
-            width: 100%;
-        }
-
-        /* .disc-nav ul li{
-            justify-content: center;
-            padding-right: 2rem;
-        } */
     }
+
+
 
     /* S */
     @media screen and (max-width: 768px){
         .disc {
             width: calc((100% / 2) - 1rem);
         }
-
     }
+
+
 
     /* XS */
     @media screen and (max-width: 576px){
         header {
             width: 50px;
+            padding: 1rem 0rem;
+            align-items: center;
+            
+        }
+
+        #main-logo .logo-big {
+            display: none;
+        }
+
+        #main-logo .logo-small {
+            display: block;
+            width: 25px;
+        }
+
+        .home img {
+            margin-right: 0rem;
+        }
+
+        .bottom-nav span img {
+            margin-right: 0rem;
+        }
+
+        .d-none {
+            display: none;
         }
 
         main {
             width: calc(100% - 50px);
         }
 
-        .play {
-            justify-content: space-between;
-        }
-    
     }
 
 

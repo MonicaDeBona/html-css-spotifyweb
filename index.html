@@ -17,53 +17,66 @@
             <nav class="top-nav">
                 <div id="main-logo">
                     <a href="#">
-                        <img src="img/logo.svg" alt="">
+                        <img class="logo-big d-none" src="img/logo.svg" alt="">
+                        <img class="logo-small" src="img/logo-small.svg" alt="">
                     </a>
                 </div>
                 <div class="home">
                     <ul>
                         <li class="flex f-align-center">
-                            <img class="home-img" src="img/home.svg" alt="">
-                            Home
+                            <a href="#">
+                                <img class="home-img" src="img/home.svg" alt="">
+                            </a>
+                            <span class="d-none hov-pw">
+                                Home
+                            </span>
                         </li>
                         <li class="flex f-align-center">
-                            <img src="img/search.svg" alt="">
-                            Cerca
+                            <a href="#">
+                                <img src="img/search.svg" alt="">
+                            </a>
+                            <span class="d-none hov-pw">
+                                Cerca
+                            </span>
                         </li>
                         <li class="flex f-align-center">
-                            <img src="img/libreria.svg" alt="">
-                            La tua libreria
+                            <a href="#">
+                                <img src="img/libreria.svg" alt="">
+                            </a>
+                            <span class="d-none hov-pw">
+                                La tua libreria
+                            </span>
                         </li>
                     </ul>
                 </div>
-                <div class="playlist">
+                <div class="playlist d-none">
                     <h4>
                         PLAYLIST
                     </h4>
-                    <span class="flex f-align-center">
+                    <span class="flex f-align-center hov-pw">
                         <i class="fa-solid fa-square-plus"></i>
                         Crea playlist
                     </span>
                     <ul>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
-                        <li>
+                        <li class="hov-pw">
                             Nome Playlist
                         </li>
                     </ul>
@@ -73,12 +86,16 @@
                 <div class="download-app">
                     <span class="flex f-align-center app">
                         <img src="img/download.svg" alt="">
-                        Installa app
+                        <span class="d-none hov-pw">
+                            Installa app
+                        </span>
                     </span>
-                    <hr>
+                    <hr class="d-none">
                     <span class="flex f-align-center user">
                         <img src="img/profile.svg" alt="">
-                        Monica
+                        <span class="d-none">
+                            Monica
+                        </span>
                     </span>
                 </div>
             </nav>
@@ -91,11 +108,9 @@
                 <!-- sezione UPGRADE -->
                 <section class="minor-content">
                     <div id="upgrade" class="flex f-end">
-                        <a href="#">
-                            <button>
+                            <button class="hov-scale">
                                 EFFETTUA L'UPGRADE
                             </button>
-                        </a>
                     </div>
                 </section>
                 <!-- sezione divisa in 4 parti, una nav-bar e tre sezioni per i dischi -->
@@ -103,25 +118,38 @@
                 <section class="main-content">
                     <!-- nav-bar del main -->
                     <nav class="disc-nav">
-                        <div class="container f-justify-center">
-                            <ul class="flex f-wrap">
+                        <div class="container ">
+                            <ul class="flex f-wrap f-justify-center">
                                 <li>
-                                    IN EVIDENZA
+                                    <a class="hov-pw" href="#">
+                                        IN EVIDENZA
+                                    </a>
+                                    <div class="empty-div"></div>
                                 </li>
                                 <li>
-                                    PODCAST
+                                    <a class="hov-pw" href="#">
+                                        PODCAST
+                                    </a>
                                 </li>
                                 <li>
-                                    CLASSIFFICHE
+                                    <a class="hov-pw" href="#">
+                                        CLASSIFFICHE
+                                    </a>
                                 </li>
                                 <li>
-                                    GENERI E MOOD
+                                    <a class="hov-pw" href="#">
+                                        GENERI E MOOD
+                                    </a>
                                 </li>
                                 <li>
-                                    NUOVE USCITE
+                                    <a class="hov-pw" href="#">
+                                        NUOVE USCITE
+                                    </a>
                                 </li>
                                 <li>
-                                    SCOPRI
+                                    <a class="hov-pw" href="#">
+                                        SCOPRI
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -134,8 +162,9 @@
                             </h2>
                             <div class="disc-container flex">
                                 <div class="disc">
-                                    <div class="disc-cover">
+                                    <div class="disc-cover p-relative">
                                         <img src="img/metal_lifting.jpg" alt="">
+                                        <i class="fa-regular fa-circle-play"></i>
                                     </div>
                                     <div class="disc-info">
                                         <h3>Heavy Metal</h3>
@@ -263,13 +292,13 @@
                     <h6>
                         Sinister
                     </h6>
-                    <p>
+                    <p class="hov-u">
                         Brano Nome
                     </p>
                 </div>
                 <div class="left-footer-icon">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-folder"></i>
+                    <i class="fa-regular fa-heart hov-pw"></i>
+                    <i class="fa-regular fa-folder hov-pw"></i>
                 </div>
             </div>
 
@@ -278,7 +307,7 @@
                 <div class="play flex f-align-center ">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play hov-scale"></i>
                     <i class="fa-solid fa-forward-step"></i>
                     <i class="fa-solid fa-arrow-rotate-right"></i>
                 </div>
@@ -286,8 +315,12 @@
                     <span>
                         0:25
                     </span>
-                    <div class="big-time-bar">
-                        <div class="small-time-bar"></div>
+                    <div class="c-big-time-bar p-relative">
+                        <div class="c-small-time-bar"></div>
+                        <div class="c-green-time-bar p-absolute p-relative">
+                            <div class="c-small-circle p-absolute"></div>
+                        </div>
+                        
                     </div>
                     <span>
                         4:20
@@ -298,8 +331,11 @@
                 <i class="fa-solid fa-display"></i>
                 <i class="fa-solid fa-display"></i>
                 <i class="fa-solid fa-volume-high"></i>
-                <div class="big-time-bar">
-                    <div class="small-time-bar"></div>
+                <div class="r-big-time-bar p-relative">
+                    <div class="r-small-time-bar"></div>
+                    <div class="r-green-time-bar p-absolute p-relative">
+                        <div class="r-small-circle p-absolute"></div>
+                    </div>
                 </div>
             </div>
         </footer>
